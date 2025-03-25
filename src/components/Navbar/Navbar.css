@@ -1,0 +1,85 @@
+.navbar-window {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    width: 100%;
+    background-color: transparent;
+    transition: background-color 0.5s ease, padding 0.3s ease;
+}
+
+.navbar-window.scrolled {
+    /* background-image: linear-gradient(135deg, #030108, #13e1e52d); */
+    /* overflow: hidden; */
+}
+
+.Ellipsetop {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.Ellipsetop.scrolled {
+    display: none;
+}
+
+.logo-window {
+    width: 90px;
+}
+
+.logo-window img {
+    width: 100%;
+    height: 100%;
+}
+
+.navbar-window.scrolled .themeBtn,
+.navbar-window.scrolled .cursor-pointer {
+    color: #fff;
+}
+
+.Gradientbg {
+    position: relative;
+}
+
+.dropdown-content {
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    /* margin-top: 20px; */
+    padding: 4px 0;
+    min-width: 160px;
+    border-radius: 5px;
+    z-index: 10;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-content .dropdown-Link {
+    font-size: 16px;
+    font-weight: 900;
+    font-family: var(--font-family);
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    padding-left: 10px;
+    padding-right: 10px;
+    /* padding: 10px 25px; */
+    color: #ffffff;
+    letter-spacing: 0.5px;
+}
+
+.dropdown-content .dropdown-Link:hover {
+    background-color: transparent;
+    color: #06B6D4;
+}
+
+
+.drop-grid {
+    background-image: linear-gradient(90deg, #00cbd9 0, #3540bc);
+    background-origin: border-box;
+    box-shadow: inset 0 100vw #000;
+    border: 2px solid transparent;
+    border-radius: 30px;
+}

@@ -1,0 +1,262 @@
+:root {
+    --font-family: 'Mona-Sans';
+    --secondary: "#B5E61D";
+}
+
+.bgset {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-image: url('./assets/images/Group 952.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 3400px;
+    /* height: 3000px; */
+    z-index: -1;
+}
+
+.gradient-text {
+    background: linear-gradient(135deg, #13E2E5 0%, #047DFB 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.themeBtn {
+    font-size: 16px;
+    font-weight: 900;
+    font-family: var(--font-family);
+    display: flex;
+    justify-content: center;
+    border-radius: 50px;
+    align-items: center;
+    width: fit-content;
+    height: fit-content;
+    padding: 10px 25px;
+    background-color: #000000a4;
+    color: #ffffff;
+    letter-spacing: 0.5px;
+}
+
+.themeBtn:hover {
+    background: radial-gradient(circle, #00CBD9 50%, #3540BC 100%);
+}
+
+.themeBtn.active {
+    background: radial-gradient(circle, #00CBD9 50%, #3540BC 100%);
+}
+
+.Gradientbg {
+    width: fit-content;
+    height: fit-content;
+    border-radius: 50px;
+    background: radial-gradient(circle, #00CBD9 50%, #3540BC 100%);
+    border: 2px solid transparent;
+    background-color: #000;
+    /* overflow: hidden; */
+    transition: 0.5s ease-in-out;
+}
+
+/* .Gradientbg-shadow{ */
+.Gradientbg:hover {
+    box-shadow: inset 0 100vw #000, 0 0 20px 0 #00cbd9;
+}
+
+.Gradientbg-shadow {
+    border-radius: 50px;
+    transition: 0.5s ease-in-out;
+}
+
+.Gradientbg-shadow:hover {
+    box-shadow: 0 0 20px 0 #00cbd9;
+}
+
+.Gradientbg-shadow-box {
+    transition: 0.5s ease-in-out;
+}
+
+.Gradientbg-shadow-box:hover {
+    box-shadow: 0 0 20px 0 #00cbd9;
+}
+.Gradientbg-shadow-box2 {
+    box-shadow: 0 0 20px 0 #00cbd936;
+}
+
+.themeBtn-gradient {
+    border-radius: 50px;
+    padding: 12px 25px;
+    background: linear-gradient(90deg, #14E8E4 0%, #0581FB 100%);
+    transition: 0.5s ease-in-out;
+}
+
+.themeBtn-gradient:hover {
+    opacity: 0.8;
+}
+
+.themeBtn-gradient-bg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    padding: 10px;
+    border-radius: 50px;
+    background-color: #2a5daa3e;
+}
+
+
+.h1.large {
+    font-weight: 900;
+    color: #F0DDFF;
+    font-size: 120px;
+    text-shadow: 2px 2px 90px rgba(0, 0, 0, 0.438), 0 0 100px rgba(0, 0, 0, 0.594);
+}
+
+
+.Gradientbg-clr {
+    background: linear-gradient(90deg, #14E8E4 0%, #0581FB 100%);
+}
+
+.Gradientbg-clr-2 {
+    background: linear-gradient(90deg, #01D6E6 0%, #047DFB 100%);
+}
+
+.Gradientbg-clr-3 {
+    background: linear-gradient(90deg, #01d7e645 0%, #047bfb64 100%);
+}
+
+
+.border-1 {
+    border: 1px solid #13e2e5;
+}
+
+.primary-txt-clr {
+    color: #01d6e6;
+}
+
+.bg-4 {
+    background-color: #1E214E;
+}
+
+.themeBtn-secondary {
+    width: 100%;
+    border-radius: 8px;
+    color: #0E0538;
+    padding: 10px;
+    font-weight: 700;
+    text-align: center;
+    background-color: #B5E61D;
+    transition: 0.5s ease-in-out;
+}
+
+.themeBtn-secondary:hover {
+    background-color: #b4e61d8e;
+}
+
+.themeBtnWhite-secondary {
+    width: 100%;
+    border-radius: 8px;
+    color: #0E0538;
+    padding: 10px;
+    font-weight: 700;
+    text-align: center;
+    background-color: #FFFFFF;
+    transition: 0.5s ease-in-out;
+}
+
+.themeBtnWhite-secondary:hover {
+    background-color: #ffffff9d;
+}
+
+.newBtn {
+    transition: 0.5s ease-in-out;
+}
+
+.newBtn:hover {
+    opacity: 0.9;
+}
+
+.texthoverchange {
+    transition: 0.5s ease-in-out;
+}
+
+.texthoverchange:hover {
+    color: #00CBD9;
+}
+
+
+
+@media only screen and (max-width: 1024px) {
+    .claim-containter {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .claim-containter {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+}
+
+
+@media only screen and (max-width: 600px) {
+    .claim-containter {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .preslaepurchangeinner {
+        flex-direction: column;
+        align-items: start;
+    }
+
+    .preslaepurchangeinner span {
+        width: 100%;
+    }
+
+    .preslaepurchangeinner .Gradientbg-clr-2 {
+        width: 100%;
+    }
+
+    .preslaepurchangeinner .Gradientbg-clr-2 input {
+        width: 100%;
+    }
+
+    .themeBtn-gradient {
+        font-size: 14px;
+    }
+
+    #chart {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+
+@media only screen and (max-width: 950px) {
+    .vestinghead {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .vestinghead h2 {
+        font-size: 16px;
+    }
+
+    .vestinghead p {
+        padding-right: 0px;
+        font-size: 13px;
+    }
+
+    .flex-column {
+        flex-direction: column;
+    }
+
+    .chartpie {
+        width: 100% !important;
+    }
+}

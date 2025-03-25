@@ -1,27 +1,57 @@
 {
-  "name": "oz7-presale-backend",
-  "version": "1.0.0",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node src/index.js",
-    "dev": "nodemon src/index.js"
-  },
-  "author": "",
-  "license": "ISC",
-  "description": "",
+  "name": "presale",
+  "version": "0.1.0",
+  "private": true,
   "dependencies": {
-    "bcrypt": "^5.1.1",
-    "bcryptjs": "^2.4.3",
-    "cors": "^2.8.5",
+    "@tanstack/query-core": "^5.67.1",
+    "@tanstack/react-query": "^5.67.1",
+    "@testing-library/jest-dom": "^5.17.0",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0",
+    "@web3modal/wagmi": "^5.0.11",
+    "aos": "^2.3.4",
+    "apexcharts": "^3.52.0",
+    "axios": "^1.7.3",
     "dotenv": "^16.4.5",
-    "express": "^4.19.2",
-    "jsonwebtoken": "^9.0.2",
+    "ethers": "^5.7.0",
     "moment": "^2.30.1",
-    "mongoose": "^8.5.2",
-    "nodemon": "^3.1.4",
-    "otpauth": "^9.3.5",
-    "otplib": "^12.0.1",
-    "qrcode": "^1.5.4"
+    "react": "^18.3.1",
+    "react-apexcharts": "^1.4.1",
+    "react-datepicker": "^7.3.0",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.26.0",
+    "react-scripts": "5.0.1",
+    "react-toastify": "^10.0.5",
+    "secure-ls": "^2.0.0",
+    "viem": "^2.18.8",
+    "wagmi": "^2.12.2",
+    "web-vitals": "^2.1.4"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.9"
   }
 }

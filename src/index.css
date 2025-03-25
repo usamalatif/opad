@@ -1,0 +1,414 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+/* @tailwind base;
+@tailwind components;
+@tailwind utilities; */
+@import "tailwindcss/base";
+
+@import "tailwindcss/components";
+
+@import "tailwindcss/utilities";
+
+@font-face {
+  font-family: 'Mona-Sans';
+  src: url('/public/font/Mona-Sans.ttf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Mona-Sans-Light';
+  src: url('/public/font/Mona-Sans-Light.ttf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Mona-Sans-Regular';
+  src: url('/public/font/Mona-Sans-Regular.ttf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Mona-Sans-Medium';
+  src: url('/public/font/Mona-Sans-Medium.ttf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Mona-Sans-Bold';
+  src: url('/public/font/Mona-Sans-Bold.ttf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Mona-Sans-SemiBold';
+  src: url('/public/font/Mona-Sans-SemiBold.ttf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Mona-Sans-ExtraBold';
+  src: url('/public/font/Mona-Sans-ExtraBold.ttf') format('opentype');
+}
+
+/* Remove up and down arrows in number input for Chrome, Safari, Edge, and Opera */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="datetime-local"]::-webkit-calendar-picker-indicator {
+  display: none;
+  -webkit-appearance: none;
+}
+
+/* Remove up and down arrows in number input for Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+  font-family: 'Mona-Sans', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #0B0620;
+  color: #fff;
+}
+
+code {
+  font-family: "Inter", sans-serif;
+  font-family: 'Mona-Sans', sans-serif;
+}
+
+.cardBox {
+  position: relative;
+  background-image: url('./assets/images/Group\ 951.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.cardBoxnot {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(12, 12, 12, 0.881);
+  z-index: 999 !important;
+  border-radius: 10px;
+  cursor: not-allowed;
+  border: 2px solid #ffffff2b;
+}
+
+.cardBoxlarge {
+  background-image: url('./assets/images/Group\ 955.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+}
+
+.cardBoxPurchase {
+  background-image: url('./assets/images/Group\ 956.png');
+  background-size: cover;
+  background-position: inherit;
+  background-repeat: no-repeat;
+  width: 100%;
+}
+
+.auditbg {
+  background-image: url('./assets/images/Group\ 957.png');
+  background-size: cover;
+  background-position: inherit;
+  background-repeat: no-repeat;
+}
+
+.distributionbox {
+  background-image: url('./assets/images/Group\ 958.png');
+  background-size: cover;
+  background-position: inherit;
+  background-repeat: no-repeat;
+}
+
+.progress-box {
+  position: relative;
+  border: 1px solid #13e1e546;
+  border-radius: 8px;
+}
+
+.progress-box::after {
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #13e2e5;
+  border-radius: 8px;
+  overflow: hidden !important;
+  opacity: 0.1;
+  z-index: 1;
+}
+
+.progress-bar {
+  position: relative;
+  background-color: #ffffff54;
+  height: 5px;
+  width: 100%;
+  border-radius: 10px;
+}
+
+.progress-bar::after {
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  width: var(--progress-width);
+  height: 100%;
+  border-radius: 10px;
+  background-color: #b5e61d;
+}
+
+#chart {
+  margin: auto;
+  width: 91%;
+}
+
+.chartpie {
+  width: 100% !important;
+  margin: auto;
+  height: 100%;
+}
+
+
+
+#startDate {
+  background-color: transparent;
+}
+
+.react-datepicker-wrapper,
+.react-datepicker__input-container,
+input {
+  width: 100%;
+}
+
+
+
+.react-datepicker__triangle {
+  display: none;
+}
+
+.react-datepicker__header {
+  background-color: #0e0a26ab;
+}
+
+.react-datepicker__day {
+  color: white;
+}
+
+.react-datepicker__current-month {
+  color: white;
+}
+
+
+
+.input-curver {
+  /* border-top-right-radius: 70px 10px !important;
+  border-top-left-radius: 70px 10px !important;
+  border-bottom-right-radius: 70px 10px !important;
+  border-bottom-left-radius: 70px 10px !important; */
+}
+
+
+/* Set */
+
+
+@property --angle {
+  syntax: '<angle>';
+  initial-value: 90deg;
+  inherits: true;
+}
+
+@property --gradX {
+  syntax: '<percentage>';
+  initial-value: 50%;
+  inherits: true;
+}
+
+@property --gradY {
+  syntax: '<percentage>';
+  initial-value: 0%;
+  inherits: true;
+}
+
+
+:root {
+  --d: 4000ms;
+  --angle: 90deg;
+  --gradX: 100%;
+  --gradY: 50%;
+  --c1: rgba(255, 255, 255, 0.582);
+  --c2: rgba(168, 239, 255, 0);
+}
+
+.box {
+  /* border: 0.25rem solid; */
+  /* border-image: conic-gradient(from var(--angle), var(--c2), var(--c1) 0.1turn, var(--c1) 0.15turn, var(--c2) 0.25turn) 30; */
+  /* border-image-slice: initial; */
+  /* border-image-outset: ; */
+  /* border-image-repeat: ; */
+  /* border-image-width: 10px; */
+  /* border-radius: 2rem; 
+  -webkit-mask-image: -webkit-radial-gradient(white, black);
+  mask-image: radial-gradient(white, black);
+  animation: borderRotate var(--d) linear infinite forwards; */
+  background: conic-gradient(from var(--angle), var(--c2), var(--c1) 0.1turn, var(--c1) 0.15turn, var(--c2) 0.25turn);
+  border-radius: inherit;
+  padding: 2px;
+  z-index: 1;
+  /* -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0); */
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  animation: borderRotate var(--d) linear infinite forwards;
+}
+
+.checkone {
+  border: 2px solid #13e1e580;
+}
+
+.box-inner {
+  position: relative;
+  z-index: 999;
+}
+
+@keyframes borderRotate {
+  100% {
+    --angle: 420deg;
+  }
+}
+
+@keyframes borderRadial {
+  20% {
+    --gradX: 100%;
+    --gradY: 50%;
+  }
+
+  40% {
+    --gradX: 100%;
+    --gradY: 100%;
+  }
+
+  60% {
+    --gradX: 50%;
+    --gradY: 100%;
+  }
+
+  80% {
+    --gradX: 0%;
+    --gradY: 50%;
+  }
+
+  100% {
+    --gradX: 50%;
+    --gradY: 0%;
+  }
+}
+
+
+
+
+/* Popup Styling */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10001;
+}
+
+.popup {
+  background: #ECDEFE;
+  padding-top: 20px;
+  border-radius: 50px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  animation: slideIn 0.2s ease-in-out;
+  text-align: center;
+  max-width: 390px;
+  z-index: 9999;
+  border: 4px solid #566796;
+  
+}
+
+
+/* .popup input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+} */
+
+/* .popup button {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+} */
+
+/* .popup button:hover {
+  background-color: #0056b3;
+} */
+
+.support-link {
+  margin-top: 10px;
+  font-size: 12px;
+}
+
+.support-link a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.support-link a:hover {
+  text-decoration: underline;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+/* Admin Panel Styling */
+.admin-panel {
+  margin: 20px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+}
+
+.admin-panel input {
+  margin-right: 10px;
+  padding: 5px;
+}
+
+.admin-panel button {
+  padding: 5px 10px;
+  margin: 5px;
+  cursor: pointer;
+}
