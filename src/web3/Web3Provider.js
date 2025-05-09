@@ -10,13 +10,13 @@ const queryClient = new QueryClient()
 
 // 1. Get projectId from https://cloud.walletconnect.com
 // const projectId = '25abc7c8fe5236e0f124a4c28776d8f4' ////previous
-const projectId = '08df46190d71194053d0c7fbbd3b723e'
+const projectId = '988d07989e19bd42d3677f479778780d'
 
 // 2. Create wagmiConfig
 const metadata = {
-    name: 'Web3Modal',
-    description: 'Web3Modal Example',
-    url: 'https://web3modal.com',
+    name: 'OPAD',
+    description: 'OPAD',
+    url: 'https://opad.fund/',
     icons: ['https://avatars.githubusercontent.com/u/37784886']
 }
 
