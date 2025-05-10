@@ -4,10 +4,23 @@ const pressaleStagesModel = require("../models/pressaleStagesModel");
 const usersModel = require("../models/usersModel");
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken')
+const { ethers } = require("ethers");
+
+const verifySignature = async (message, signature, wallet_address) => {
+    const recoveredAddress = ethers.verifyMessage(message, signature);
+    return recoveredAddress.toLowerCase() === wallet_address.toLowerCase();
+};
+
 exports.userLogin = async (req, res) => {
     try {
         //user login n signup
         const { wallet_address, signature } = req.body;
+        const message = `Sign this message to verify your wallet: ${wallet_address}`;
+        const isVerified = await verifySignature(message, signature, wallet_address);
+        if (!isVerified) {
+            return res.status(200).json({ status: 401, message: "Unauthorized user" });
+        }
+
         const user = await usersModel.findOne({ wallet_address });
         if (!user) {
             //if user is not existed register its account

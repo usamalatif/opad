@@ -7,7 +7,7 @@ const { viewVesting } = require('../controllers/claimController');
 const { viewData } = require('../controllers/adminController');
 const cors = require('cors');
 const corsOptions = {
-    origin: ["https://optimuspresale.netlify.app/", "http://localhost:3000"]
+    origin: ["https://optimuspresale.netlify.app/", "http://localhost:3000", "https://opad.fund/"]
 };
 router.post('/signup', cors(corsOptions), user_controller.userLogin)
 router.get('/view-presales', user_controller.viewPresales);
